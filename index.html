@@ -1,0 +1,52 @@
+<div class="app">
+  <div class="header">
+    <h1>🚑 Smart Emergency Lane System</h1>
+    <p>AI-Based Ambulance • Traffic • Hospital Coordination</p>
+  </div>
+  <div class="controls">
+    <button class="emergency" onclick="activateEmergency()">🚨 Emergency Mode</button>
+    <button class="stable" onclick="activateStable()">🟢 Stable Condition</button>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>📍 Nearest Hospital</h3>
+      <p id="hospitalLocation">Waiting for selection...</p>
+    </div>
+    <div class="card">
+      <h3>🚦 Traffic Control System</h3>
+      <p id="trafficStatus">No alerts sent.</p>
+    </div>
+    <div class="card">
+      <h3>📢 Public Announcement</h3>
+      <p id="publicAlert">---</p>
+    </div>
+    <div class="card">
+      <h3>🏥 Hospital Notification</h3>
+      <p id="hospitalAlert">---</p>
+      <p id="availability">---</p>
+    </div>
+  </div>
+  <div class="map-card">
+    <h3>🗺 Live Route Simulation</h3>
+    <div class="road">
+      <div class="ambulance" id="ambulance" onclick="ambulanceClicked()">🚑</div>
+      <div class="traffic">🚦</div>
+      <div class="traffic-text">Traffic Signal – 2 km Ahead</div>
+    </div>
+  </div>
+  <div class="eta-card">
+    <h2>⏱ Estimated Arrival Time</h2>
+    <p id="eta">--</p>
+  </div>
+  <div class="history-control">
+    <button class="history-btn" onclick="toggleHistory()">📜 View Case History</button>
+    <button class="clear-btn" onclick="clearHistory()">🗑 Clear History</button>
+  </div>
+  <div class="history-panel" id="historyPanel">
+    <h3>📋 Case History Log</h3>
+    <div id="historyList">
+      <p class="empty">No cases recorded yet.</p>
+    </div>
+  </div>
+</div>
+Added main website file
