@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background-attachment: fixed;
+  color: white;
+}
+.app {
+  padding: 30px;
+  text-align: center;
+}
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+.controls {
+  margin: 20px 0;
+}
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.emergency {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+}
+.stable {
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+  color: white;
+}
+button:hover {
+  transform: scale(1.05);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+/* ROUTE */
+.map-card {
+  margin-top: 30px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+.road {
+  position: relative;
+  height: 70px;
+  background: #333;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.ambulance {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: left 5s linear;
+  transform: scaleX(-1); /* ✅ Ambulance flipped to face traffic */
+}
+.traffic {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 28px;
+}
+.traffic-text {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 12px;
+  opacity: 0.8;
+  font-style: italic;
+}
+.eta-card {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 22px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+/* HISTORY */
+.history-control {
+  margin-top: 20px;
+}
+.history-btn {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+}
+.clear-btn {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+}
+.history-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 0 20px;
+  text-align: left;
+}
+.history-panel.open {
+  max-height: 400px;
+  padding: 20px;
+}
+.history-item {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.empty {
+  font-size: 13px;
+  opacity: 0.7;
+}
